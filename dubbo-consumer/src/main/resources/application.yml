@@ -1,0 +1,19 @@
+server:
+  port: 8091
+dubbo:
+  protocol:
+    name: dubbo
+    port: -1
+  registry:
+    address: spring-cloud://192.168.163.21:8848
+  cloud:
+    subscribed-services: dubbo-provider
+spring:
+  application:
+    name: dubbo-consumer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.163.21:8848
+  main:
+    allow-bean-definition-overriding: true
