@@ -8,6 +8,8 @@ dubbo:
     address: spring-cloud://192.168.163.21:8848
   cloud:
     subscribed-services: dubbo-provider
+  consumer:
+    check: false
 spring:
   application:
     name: dubbo-consumer
